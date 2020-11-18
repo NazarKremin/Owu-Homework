@@ -26,6 +26,7 @@
 // // console.log(fal);
 // //
 //
+
 // //TASK 2
 // //переопределить каждую переменную из задания 1 дав им произвольные значения Вывести каждую при помощи console.log , alert, document.write
 // // six = numbers
@@ -37,6 +38,7 @@
 // // a = b
 // // console.log( a )
 //
+
 // //TASK 3
 // //Создать 3 числовых и 3 стринговых константы. Вывести каждую при помощи console.log , alert, document.write
 // // const name = 'Nazar';
@@ -55,6 +57,7 @@
 // // alert( two );
 // // document.write( three );
 //
+
 // //TASK 4
 // //при помощи 3х разных prompt() получить 3 слова которые являются вашими ФИО. Для фамилии имени и отчества создать разные переменные. Вывести каждую при помощи console.log , alert, document.write
 // // let name = prompt("name") ;
@@ -64,6 +67,7 @@
 // // // alert('You are ' + lastName + parents + name);
 // // document.write('You are ' + lastName + parents + name);
 //
+
 // //TASK 5
 // // Взять переменные из задания 4 и сконкатенировать их в одной переменной person.
 // // let name = prompt("name") ;
@@ -73,6 +77,7 @@
 // // let  person = (`You are ${name} ${lastName} ${parents}` );
 // // console.log(person);
 //
+
 // //TASK 6
 // //Взять задние 4 и 5 и применить его к ФИО всех членов своей семьи.
 // // let fatherName = ('Vasyl');
@@ -83,6 +88,7 @@
 // // console.log( 'My mother ' + motherName );
 // // console.log( 'My name ' + myName );
 //
+
 // //TASK 7
 // //при помощи prompt() получить 3 числа. Привести их к числовому типу при помощи +. вывести их в консоль.
 // // let WhatNumber1 = +prompt( 'What your number?');
@@ -91,6 +97,7 @@
 // // let result =  WhatNumber1 + WhatNumber2 + WhatNumber3 ;
 // // console.log( result );
 //
+
 // //TASK 8
 // //при помощи prompt() получить 4 числа. Привести их к числовому типу при помощи parseInt. Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 // // let WhatNumber1 = prompt( 'What your number?');
@@ -100,6 +107,7 @@
 // // let result =  parseInt( WhatNumber1 ) + parseInt( WhatNumber2 ) + parseInt( WhatNumber3 ) + parseInt( WhatNumber4 ) ;
 // // console.log( result );
 //
+
 // //TASK 9
 // //при помощи prompt()  получить 3 числа с плавающей точекой. при помощи parseFloat привести их к соответсвующему типу. Сложить их между собой записав результат в переменную result и вывести в консоль браузера
 // // let WhatNumber1 = +prompt( 'What your number?');
@@ -108,6 +116,7 @@
 // // let result =  parseFloat( WhatNumber1 ) * parseFloat( WhatNumber2 ) * parseFloat( WhatNumber3 ) ;
 // // console.log(result);
 //
+
 // //TASK 10
 // //при помощи prompt()  получить 3 числа с плавающей точекой. Округлить их при помощи Math.round Сложить их между собой записав результат в переменную  и вывести в консоль браузера
 // // let WhatNumber1 = +prompt( 'What your number?');
@@ -116,6 +125,7 @@
 // // let result =  Math.round( WhatNumber1 ) * Math.round( WhatNumber2 ) * Math.round( WhatNumber3 ) ;
 // // console.log(result);
 //
+
 // //TASK 11
 // //при помощи prompt()  получить 2 целых числа. Привести их к целочисленному типу. Первое число - это число которое будут возводить в степень. Второе число - это число которое является степенью. При помощи Math.pow возвести первое число в степень второго числа.
 // // let num1 = parseInt(prompt('x'));
@@ -123,6 +133,7 @@
 // // Let result = Math.pow(num1, num2);
 // // console.log(result)
 //
+
 // //TASK12
 // //При помощи оператора опредеоения типа typeof определить типы следующих переменных и вывести их в консоль let a = 100; let b = '100'; let c = true; let d = undefined;
 // // let a = 100;
@@ -134,6 +145,7 @@
 // // console.log(typeof c);
 // // console.log(typeof d);
 //
+
 // //TASK 13
 // //Поставьте соответствующий оператор в выражениях что бы получился соответсвующий результат.
 // //В одинаковых выражениях в задании не использовать два одинаковых оператора.
@@ -180,6 +192,7 @@
 // // console.log((111 > 11 || 45 < 111) ||  !!'0');true
 // // console.log((!!111 == !!11 || 45 < 111) && (99 > 100 && 45 > 12 ));false
 //
+
 // //CLASS
 // //
 // // 1.Определите переменные str, num, flag и txt со значениями «Привет», 123, true, «true».
@@ -354,6 +367,7 @@
 // // let age = prompt( 'Ваш вік?' );
 // // alert('Доброго вечора '+ name + ", мої вітання що вам " + age );
 // //
+
 // // =====================
 // // ======ДОП============
 // // =====================
@@ -361,16 +375,16 @@
 // // 1. Три різних числа вводяться через prompt().
 // //     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
 // //
-//  let num1 = prompt('Number?') ;
-//  let num2 = prompt('Number?') ;
-//  let num3 = prompt('Number?') ;
+//  let a = prompt('Number?') ;
+//  let b = prompt('Number?') ;
+//  let c = prompt('Number?') ;
 //
-//  if (num1 > num2 > num3){
-//     (num1);
-// }else if (num1 < num2 > num3){
-//      alert(num2);
-//  }else if (num1 < num2 < num3){
-//      alert(num3);
+//  if (a > b && a > c){
+//     alert(a);
+// }else if (a < b && b > c){
+//      alert(b);
+//  }else if (a < c && b < c){
+//      alert(c);
 //  }
 // //
 // // 2.
@@ -397,7 +411,6 @@
 // }else if ( people == emergencyRed ){
 //     alert( 'роби що хочеш' )
 // }
-//
 //     3
 // Все параметры получаем с клавиатуры!!!!(prompt , confirm)
 // Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
@@ -410,25 +423,24 @@
 //     Если светофор красный - и машины есть вывести "стой и жди".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 //
-// let isRoadClear = prompt('наличие на дороге машин') ;
-// let green = ('зеленый и машин нет') ;
-// let greenNo = ('зеленый и машины есть')
-// let yellow = ( 'желтый и машины есть') ;
-// let yellowNo = ( ' желтый и машин нет ' ) ;
-// let red = ( 'красный и машин нет' ) ;
-// let redNo = ( 'машины есть' ) ;
-// let emergencyRed = ( 'Аварійни режим' ) ;
-// //
-// if ( isRoadClear == green ){
+// let green = 'Зелене' ;
+// let yellow = 'Жовте' ;
+// let red =  'Червоне' ;
+// let emergencyRed = 'Аварійни режим'  ;
+// let color = prompt('Color')
+// let isRoadClear = confirm() ;
+// if (color == green && isRoadClear){
 //     alert( 'иди' );
-// }else if  (isRoadClear == greenNo ){
-//     alert( 'подожди пока нарушители проедут' ) ;
-// }else if ( isRoadClear == yellow){
-//     alert( ' жди' )
-// }else if ( isRoadClear == yellowNo ){
+// }else if (color == green && !isRoadClear){
+//     alert( 'подожди пока нарушители проедут' )
+// }else if (color == yellow && isRoadClear){
+//     alert( 'жди' )
+// }else if (color == yellow && !isRoadClear){
 //     alert( 'все рано жди' )
-// }else if ( isRoadClear == red ){
-//     alert( 'красный и машин нет' )
-// }else if ( isRoadClear == redNo ){
-//     alert( 'машины есть' )
+// }else if (color == red && isRoadClear){
+//     alert( 'стой и жди' )
+// }else if (color == red && !isRoadClear){
+//     alert( 'стой все рано' )
+// }else if (color == emergencyRed && isRoadClear){
+//     alert( 'делай что хочешь' )
 // }
