@@ -96,61 +96,78 @@
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма,
 // в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
 //
-let name = document.getElementById('input')
-let phone= document.getElementById('input2')
-let mail = document.getElementById('input3')
-let firma = document.getElementById('input4')
-let departament = document.getElementById('input5')
-let birthday = document.getElementById('input6')
-let btn = document.getElementById('btn')
-btn.innerText = 'Save';
-let index = 0;
+let content = document.getElementById('content')
+let form = document.forms.form1
+let arrUsers = 'arrUsers'
+let tempUser = {};
 
-btn.onclick = () => {
-    index += 1
-    localStorage.setItem('index', index)
-    if (name.value !== '') {
-        localStorage.setItem('name' + index, name.value)
-    }
-    if (phone.value !== '') {
-        localStorage.setItem('phone' + index, phone.value)
-    }
-    if (mail.value !== '') {
-        localStorage.setItem('mail' + index, mail.value)
-    }
-    if (firma.value !== '') {
-        localStorage.setItem('firma' + index, firma.value)
-    }
-    if (departament.value !== '') {
-        localStorage.setItem('departament' + index, departament.value)
-    }
-    if (birthday.value !== '') {
-        localStorage.setItem('birthday' + index, birthday.value)
-    }
-    window.onload = function () {
-        let flag = localStorage.getItem('index')
-        if (flag) {
-            index += flag
+form.submit1.onclick = ev => {
+    ev.preventDefault()
+    let person = {};
+    for (let i = 0; i < form.children.length; i++) {
+        const formElement = form.children[i];
+        if (formElement.name && formElement.type !== 'submit' ){
+         person[formElement.name] = formElement.value;
         }
-        for (let i = 0; i <= flag.length; i++) {
-            if (localStorage.getItem(name + 1) !== '') {
-                let div = document.createElement('div')
-                document.body.appendChild(div)
-                div.innerText = localStorage.getItem(name + i)
-                let deleted = document.createElement('button')
-                let change = document.createElement('button')
-                div.appendChild(deleted)
-                div.appendChild(change)
-                deleted.innerText = 'Deleted'
-                change.innerText = 'Change'
-
-            }
+    }
+    person.id = new Date().getTime();
+    console.log(person);
+    save(person)
+}
+function save(user){
+    if (localStorage.hasOwnProperty(arrUsers)){
+        localStorage.getItem(arrUsers)
+        let arrayU = JSON.parse(localStorage.getItem(arrUsers))
+        let find = arrayU.find(value => value.id === user.id)
+        if (find){
+            let filter = arrayU.filter(value => value.id !== user.id);
+            filter.push(user)
+            localStorage.setItem(arrUsers,JSON.stringify(filter))
+        }else {
+            arrayU.push(user)
+            localStorage.setItem(arrUsers,JSON.stringify(arrayU));
         }
+    }else{
+        localStorage.setItem(arrUsers,JSON.stringify([user]))
     }
 }
 
+function getData(){
+    if (localStorage.hasOwnProperty(arrUsers)){
+        let arrUser = JSON.parse(localStorage.getItem(arrUsers))
+        for (const user of arrUser) {
+            content.appendChild(cDiv(user))
+        }
+    }
+}
+getData()
+function cDiv (user){
+    let div = document.createElement("div")
+    for (const key in user) {
+           let p = document.createElement('p')
+           p.innerText = key + '' + user[key];
+           div.appendChild(p)
+    }
+    div.style.width='200px'
+    div.style.display='flex'
+    div.style.border='black 1px solid'
 
+    let btn1 = document.createElement('button')
+    let btn2 = document.createElement('button')
+    btn1.innerText = 'Del'
+    btn2.innerText = 'Change'
+    btn1.onclick = function (){
+        console.log(user.id)
 
+    }
+    btn2.onclick = function (){
+        console.log(user.id)
+    }
+    document.body.appendChild(btn1)
+    document.body.appendChild(btn2)
+
+    return div;
+}
 
 
 
